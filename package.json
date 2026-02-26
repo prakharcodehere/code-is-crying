@@ -3,10 +3,10 @@
   "displayName": "code-is-crying",
   "publisher": "code-is-crying",
   "description": "Plays a sound whenever your terminal command fails.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "icon": "icon.jpeg",
   "engines": {
-    "vscode": "^1.109.0"
+    "vscode": "^1.93.0"
   },
   "categories": [
     "Other"
