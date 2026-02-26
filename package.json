@@ -1,0 +1,34 @@
+{
+  "name": "beep-boop-ur-code-is-broken",
+  "displayName": "beep-boop-ur-code-is-broken",
+  "description": "Plays a sound whenever your code has an error.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {},
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/node": "^20.x",
+    "@types/play-sound": "^1.1.2",
+    "@types/vscode": "^1.109.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "play-sound": "^1.1.6"
+  }
+}
