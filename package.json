@@ -3,11 +3,11 @@
   "displayName": "code-is-crying",
   "publisher": "code-is-crying",
   "description": "Plays a sound whenever your terminal command fails.",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "icon": "icon.jpeg",
   "license": "MIT",
   "engines": {
-    "vscode": "^1.109.0"
+    "vscode": "^1.93.0"
   },
   "categories": [
     "Other"
@@ -28,7 +28,7 @@
   "devDependencies": {
     "@types/node": "^20.x",
     "@types/play-sound": "^1.1.2",
-    "@types/vscode": "^1.109.0",
+    "@types/vscode": "1.93.0",
     "typescript": "^5.3.0"
   },
   "dependencies": {
