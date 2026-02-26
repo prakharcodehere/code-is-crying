@@ -84,4 +84,28 @@ Supports `.mp3`, `.wav`, `.ogg`, `.aiff`.
 
 ---
 
+---
+
+## Join the club
+
+[![VS Code Installs](https://img.shields.io/visual-studio-marketplace/i/code-is-crying.code-is-crying?label=developers%20who%20can%27t%20code%20in%20silence&color=blueviolet&style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=code-is-crying.code-is-crying)
+
+---
+
+## If this made you laugh
+
+[![GitHub stars](https://img.shields.io/github/stars/prakharcodehere/code-is-crying?style=for-the-badge&color=yellow)](https://github.com/prakharcodehere/code-is-crying)
+
+Give it a star on GitHub — it won't fix your code but it'll make the extension feel better about itself.
+
+---
+
+## Share the pain
+
+[![Tweet](https://img.shields.io/badge/Tweet%20this-%231DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/intent/tweet?text=I%20just%20installed%20an%20extension%20that%20plays%20meme%20sounds%20every%20time%20my%20terminal%20fails%20and%20honestly%20I%20deserve%20it%20%F0%9F%98%AD%20%E2%80%94%20code-is-crying%20for%20%40code%20https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Dcode-is-crying.code-is-crying)
+
+Your teammates need to know about this.
+
+---
+
 *Built for developers who need a little emotional damage to stay productive.*

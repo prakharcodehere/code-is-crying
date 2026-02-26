@@ -1,10 +1,11 @@
 {
-  "name": "beep-boop-ur-code-is-broken",
-  "displayName": "beep-boop-ur-code-is-broken",
-  "description": "Plays a sound whenever your code has an error.",
+  "name": "code-is-crying",
+  "displayName": "code-is-crying",
+  "publisher": "code-is-crying",
+  "description": "Plays a sound whenever your terminal command fails.",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.93.0"
+    "vscode": "^1.109.0"
   },
   "categories": [
     "Other"
