@@ -32,20 +32,19 @@ That's it. No setup. No config. It just works.
 
 ---
 
-## Add Your Own Sounds
+## Sounds
 
-Drop any audio files into the extension's `sounds/` folder:
+Comes loaded with multiple meme sounds out of the box. Every time your terminal fails, a random one plays — so you never know what's coming.
+
+Want to add your own? Drop any audio file into the extension's `sounds/` folder:
 
 ```
 sounds/
-  error.mp3
-  sad-trombone.mp3
-  vine-boom.mp3   ← as many as you want
+  your-sound.mp3
+  another-one.wav   ← as many as you want
 ```
 
-Supports `.mp3`, `.wav`, `.ogg`, `.aiff`. A random one plays each time.
-
-> Grab free sounds from [mixkit.co/free-sound-effects](https://mixkit.co/free-sound-effects/)
+Supports `.mp3`, `.wav`, `.ogg`, `.aiff`.
 
 ---
 
