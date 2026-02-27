@@ -36,15 +36,80 @@ That's it. No setup. No config. It just works.
 
 Comes loaded with multiple meme sounds out of the box. Every time your terminal fails, a random one plays — so you never know what's coming.
 
-Want to add your own? Drop any audio file into the extension's `sounds/` folder:
-
-```
-sounds/
-  your-sound.mp3
-  another-one.wav   ← as many as you want
-```
-
 Supports `.mp3`, `.wav`, `.ogg`, `.aiff`.
+
+---
+
+## Custom Sounds
+
+You can add your own sounds — straight from VS Code or your terminal.
+
+### Via Command Palette
+
+Open the Command Palette (`Cmd+Shift+P`) and search **"Code is Crying"**:
+
+| Command Palette | Command ID | What it does |
+|---|---|---|
+| `Code is Crying: Add Custom Sound` | `code-is-crying.addCustomSound` | Opens a file picker — pick any audio file(s) to add to your collection |
+| `Code is Crying: Remove Custom Sound` | `code-is-crying.removeSound` | Shows a list of your custom sounds — select one or more to delete |
+| `Code is Crying: List Loaded Sounds` | `code-is-crying.listSounds` | See every sound currently in the pool (bundled + custom) |
+| `Code is Crying: Install CLI to PATH` | `code-is-crying.installCli` | One-click install of the `code-is-crying` CLI to `/usr/local/bin` |
+
+The first time you add a sound, it gets saved to a folder managed by the extension. You can also point it at any folder you like via settings (see below).
+
+### Via Settings
+
+Point the extension at any folder full of sounds:
+
+```
+Settings → search "code-is-crying" → Custom Sounds Directory
+```
+
+Or add it directly to your `settings.json`:
+
+```json
+{
+  "code-is-crying.customSoundsDirectory": "/path/to/your/sounds"
+}
+```
+
+All files in that folder will be added to the pool alongside the built-in sounds.
+
+---
+
+## Terminal CLI
+
+Want to manage your sounds without leaving the terminal? Install the CLI first:
+
+**Option 1 — from VS Code:**
+Open the Command Palette → `Code is Crying: Install CLI to PATH`
+
+**Option 2 — manually:**
+```sh
+sudo node /path/to/extension/bin/cli.js  # or let the command above handle it
+```
+
+Once installed, you get the `code-is-crying` command anywhere:
+
+```sh
+# Add one or more sounds
+code-is-crying add ./my-sound.mp3
+code-is-crying add ~/Downloads/vine-boom.mp3 ~/Downloads/sad-trombone.wav
+
+# Remove a custom sound by filename
+code-is-crying remove vine-boom.mp3
+
+# List all your custom sounds
+code-is-crying list
+
+# Print the custom sounds folder path
+code-is-crying dir
+
+# Help
+code-is-crying help
+```
+
+The CLI reads your VS Code settings automatically — if you've set a custom sounds directory, it uses that. Otherwise it uses the same default folder the extension manages.
 
 ---
 
@@ -59,7 +124,7 @@ Supports `.mp3`, `.wav`, `.ogg`, `.aiff`.
 > If you don't see it, enable it via:
 > **Settings → Terminal → Integrated: Shell Integration: Enabled → turn it on**
 
-- VS Code **1.93 or later**
+- VS Code **1.93 or later** or **Cursor**
 - macOS, Windows, or Linux
 
 ---
@@ -72,17 +137,22 @@ Supports `.mp3`, `.wav`, `.ogg`, `.aiff`.
 | Windows | Works out of the box |
 | Linux | Run `sudo apt install alsa-utils` if no sound plays |
 
+| Editor | Status |
+|---|---|
+| VS Code | ✓ Full support |
+| Cursor | ✓ Full support (install from VS Code Marketplace or `.vsix`) |
+
 ---
 
 ## Troubleshooting
 
 | Problem | Fix |
 |---|---|
-| No sound plays | Make sure at least one audio file is in the `sounds/` folder |
+| No sound plays | Make sure at least one audio file is in the sounds pool (run `code-is-crying list` to check) |
 | Sound never triggers | Check that Shell Integration is enabled (see Requirements above) |
 | Extension not activating | Make sure you're on VS Code 1.93+ |
-
----
+| CLI install fails with permission error | The command will offer to re-run with `sudo` automatically |
+| Custom sounds not playing | Verify the path in Settings → `code-is-crying.customSoundsDirectory` exists and contains audio files |
 
 ---
 

@@ -3,9 +3,13 @@
   "displayName": "code-is-crying",
   "publisher": "code-is-crying",
   "description": "Plays a sound whenever your terminal command fails.",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "icon": "icon.jpeg",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prakharcodehere/code-is-crying"
+  },
   "engines": {
     "vscode": "^1.93.0"
   },
@@ -28,7 +32,40 @@
     "onStartupFinished"
   ],
   "main": "./out/extension.js",
-  "contributes": {},
+  "contributes": {
+    "commands": [
+      {
+        "command": "code-is-crying.addCustomSound",
+        "title": "Add Custom Sound",
+        "category": "Code is Crying"
+      },
+      {
+        "command": "code-is-crying.removeSound",
+        "title": "Remove Custom Sound",
+        "category": "Code is Crying"
+      },
+      {
+        "command": "code-is-crying.listSounds",
+        "title": "List Loaded Sounds",
+        "category": "Code is Crying"
+      },
+      {
+        "command": "code-is-crying.installCli",
+        "title": "Install CLI to PATH",
+        "category": "Code is Crying"
+      }
+    ],
+    "configuration": {
+      "title": "Code is Crying",
+      "properties": {
+        "code-is-crying.customSoundsDirectory": {
+          "type": "string",
+          "default": "",
+          "description": "Path to a folder with custom sound files (.mp3, .wav, .ogg, .aiff). Leave empty to use the built-in sounds only."
+        }
+      }
+    }
+  },
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
