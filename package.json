@@ -3,7 +3,7 @@
   "displayName": "code-is-crying",
   "publisher": "code-is-crying",
   "description": "Plays a sound whenever your terminal command fails.",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "icon": "icon.jpeg",
   "license": "MIT",
   "engines": {
@@ -11,6 +11,18 @@
   },
   "categories": [
     "Other"
+  ],
+  "keywords": [
+    "sound",
+    "error",
+    "terminal",
+    "notification",
+    "fun",
+    "audio",
+    "beep",
+    "alert",
+    "productivity",
+    "meme"
   ],
   "activationEvents": [
     "onStartupFinished"
